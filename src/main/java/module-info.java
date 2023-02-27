@@ -5,6 +5,7 @@ module org.example.trigquizzer {
     requires java.sql;
     requires org.xerial.sqlitejdbc;
     requires com.google.gson;
+    requires commons.io;
 
     opens org.example.trigquizzer to javafx.fxml;
     exports org.example.trigquizzer;
