@@ -11,9 +11,16 @@
     -fx-border-color:white;
 
 }
+.list-cell:hover {
+    -fx-border-color: #d92828;
+
+}
 
 .button:hover {
     -fx-border-color: #d92828;
+}
+.list-cell:pressed {
+    -fx-background-color: rgba(255, 0, 0, 0.32);
 }
 .button:pressed {
     -fx-background-color: rgba(255, 0, 0, 0.32);

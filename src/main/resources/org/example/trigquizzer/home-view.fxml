@@ -8,11 +8,14 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.ListView?>
 <VBox fx:id="layout" alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.trigquizzer.HomeController">
+      fx:controller="org.example.trigquizzer.controller.HomeController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
+
+    <ListView fx:id="categories"/>
 
     <Button fx:id="resources" onAction="#onResourcesPressed">
         resources

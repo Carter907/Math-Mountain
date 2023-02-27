@@ -1,4 +1,4 @@
-package org.example.trigquizzer;
+package org.example.trigquizzer.model;
 
 import javafx.scene.control.TextField;
 

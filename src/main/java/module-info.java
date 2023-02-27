@@ -9,4 +9,8 @@ module org.example.trigquizzer {
 
     opens org.example.trigquizzer to javafx.fxml;
     exports org.example.trigquizzer;
+    exports org.example.trigquizzer.model;
+    opens org.example.trigquizzer.model to javafx.fxml;
+    exports org.example.trigquizzer.controller;
+    opens org.example.trigquizzer.controller to javafx.fxml;
 }

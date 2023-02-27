@@ -1,4 +1,4 @@
-package org.example.trigquizzer.model;
+package org.example.trigquizzer;
 
 import com.google.gson.GsonBuilder;
 

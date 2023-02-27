@@ -1,7 +1,7 @@
 package org.example.trigquizzer.repo;
 
 import org.example.trigquizzer.data.Database;
-import org.example.trigquizzer.model.Link;
+import org.example.trigquizzer.Link;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
