@@ -4,13 +4,18 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.print.PageOrientation;
 import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
+import javafx.stage.Window;
+import org.example.trigquizzer.AppStart;
 import org.example.trigquizzer.model.AnswerParser;
 import org.example.trigquizzer.model.MathType;
 import org.example.trigquizzer.repo.JdbcLinkRepository;
@@ -63,7 +68,13 @@ public class HomeController implements Initializable {
 
         switch (newValue) {
             case TRIGONOMETRY -> {
-
+                try {
+                    FXMLLoader loader = new FXMLLoader();
+                    Scene scene = categoryListTitle.getScene();
+                    scene.setRoot(loader.load(AppStart.class.getResourceAsStream("trig-home-view.fxml")));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
 
