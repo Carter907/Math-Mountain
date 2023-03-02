@@ -1,13 +1,18 @@
 package org.example.trigquizzer.controller;
 
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.print.PageOrientation;
 import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 import org.example.trigquizzer.model.AnswerParser;
+import org.example.trigquizzer.model.MathType;
 import org.example.trigquizzer.repo.JdbcLinkRepository;
 
 import java.awt.*;
@@ -19,6 +24,8 @@ import java.util.Arrays;
 import java.util.NoSuchElementException;
 import java.util.ResourceBundle;
 
+import static org.example.trigquizzer.model.MathType.*;
+
 
 public class HomeController implements Initializable {
     @FXML
@@ -26,7 +33,9 @@ public class HomeController implements Initializable {
     @FXML
     public VBox layout;
     @FXML
-    public ListView categories;
+    public ListView<MathType> categories;
+    @FXML
+    public Label categoryListTitle;
     private JdbcLinkRepository repo;
     private AnswerParser parser;
 
@@ -39,12 +48,26 @@ public class HomeController implements Initializable {
         repo = new JdbcLinkRepository();
 
         categories.getItems().addAll(Arrays.asList(
-                "Trigonometry",
-                "Algebra 2",
-                "Calculus",
-                "Linear Algebra",
-                "Geometry"
+                ALGEBRA_2,
+                GEOMETRY,
+                CALCULUS,
+                LINEAR_ALGEBRA,
+                TRIGONOMETRY
         ));
+        categories.getSelectionModel().selectedItemProperty().addListener(this::categoriesChanged);
+    }
+
+    public void categoriesChanged(
+            ObservableValue<? extends MathType> observableValue,
+            MathType oldVal, MathType newValue) {
+
+        switch (newValue) {
+            case TRIGONOMETRY -> {
+
+            }
+        }
+
+
     }
 
 

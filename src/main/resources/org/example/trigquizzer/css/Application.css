@@ -11,6 +11,10 @@
     -fx-border-color:white;
 
 }
+#categoryListTitle {
+    -fx-border-color: transparent;
+    -fx-background-color: gray;
+}
 .list-cell:hover {
     -fx-border-color: #d92828;
 
